@@ -47,6 +47,7 @@ export default App;
 //in class component we need to include two imports
 //react and the component class
 //it has its own private data state
+//
 
 import  React,{Component};
 import MyComponent from "../MyComponent";

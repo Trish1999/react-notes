@@ -2,6 +2,7 @@
 //JSX is a JavaScript syntactic extension.
 // In jsx You can write HTML codes in the js file as by utilizing JSX.
 //React will process the JSX and it will transform it into JavaScript that the browser will be able to interpret
+//it has a tag  attribute and chilren like xml.
 
 //in jsx you can unite any piece of javascript code between paranthesis{} it will work.
 
@@ -16,12 +17,27 @@ return(
     </react.fragment>
 )
 
+//with jsx
+return(
+    <div className='dummy'>
+    <h1>Hello trishna</h1>
+    </div>
+)
+//without jsx
+return React.createElement(
+    'div',
+    {id:"hello",className:"dummy"},
+    React.createElement('h1',null,"hello trishna")
+)
+
 //html vs jsx
 //In HTML we use the class attribute but in jsx we use className
+//in html we use for but in jsx we use htmlFor
+//in jsx we use camelCase naming convention (onclick--> onClick)
 //html try to ingore errors and interpreat without breaking but in jsx you will get a clear error.
 //in JSX we can embed JavaScript.
 
-//----------------------------------------
+//---------------------------------------
 //components:
 //component is a part of user Interface
 
@@ -52,7 +68,7 @@ function WelcomeMessage() {
  return <p>Welcome!</p>
 }
  
-function App() {    ///parent component
+function App() {    //parent component
  return (
  <div className="App">
   <WelcomeMessage /> {/*child component of APP() */}
